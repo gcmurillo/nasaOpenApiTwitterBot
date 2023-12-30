@@ -27,7 +27,7 @@ class NasaApiManager:
         apod_response = ApodResponse(response.content)
         return apod_response
     
-    def get_random_pictures(self, count = 1):
+    def get_random_pictures(self, count = 100):
         logging.info("Getting random pictures {}".format(count))
         response = requests.get(
             "https://api.nasa.gov/planetary/apod?api_key={0}&count={1}".format(
